@@ -30,9 +30,11 @@ docker run -p 5000:5000 flask-app
 The pipeline is triggered on every push to the main branch.
 Steps in the pipeline:
 
-Build: Ensures the app builds successfully.
-Test: (Placeholder for unit tests).
-Deploy: Uses Docker and Ansible to deploy the app.
+ Build: Ensures the app builds successfully.
+
+ Test: (Placeholder for unit tests).
+
+ Deploy: Uses Docker and Ansible to deploy the app.
 
 
 ## Files Overview
