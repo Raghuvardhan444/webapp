@@ -9,8 +9,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
   
-  deploy-app:
-    name: Deploy nginx app
+  build-app:
+    name: build nginx app
     needs: checkout
     runs-on: nginx
     steps:
@@ -18,6 +18,14 @@ jobs:
         run: |
           ls -la
           docker build -t my-app:v1.0.0 .
+          
+  deploy-app:
+    name: Deploy nginx app
+    needs: build-app
+    runs-on: nginx
+    steps:
+      - name: docker build
+        run: |
           docker run --name mynginxapp -dit -P my-app:v1.0.0
           sleep 15
           docker ps -aq
