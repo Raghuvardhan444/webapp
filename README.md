@@ -49,3 +49,9 @@ ansible-playbook.yml: Configures and deploys the application using Ansible.
 ## Challenges
 Setting up Ansible modules for Docker requires installing the community.docker.
 Ensuring GitHub Actions runners had Docker installed.
+
+
+## Execution output screenshot
+
+![image](https://github.com/user-attachments/assets/5076c06d-6832-4a39-a26b-bd66603a65e4)
+
