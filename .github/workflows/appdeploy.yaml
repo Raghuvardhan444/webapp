@@ -1,0 +1,20 @@
+name: deploy nginx app
+on:
+  workflow_dispatch:
+
+jobs:
+  checkout:
+    name: Git-checkout
+    runs-on: nginx
+    steps:
+    - uses: actions/checkout@v4
+  
+  deploy-app:
+    name: Deploy nginx app
+    needs: checkout
+    runs-on: nginx
+    steps:
+      - name: docker build
+        run: |
+          ls -la
+          docker build -t my-app:v1.0.0 .
