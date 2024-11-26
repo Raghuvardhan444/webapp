@@ -18,14 +18,14 @@ This project demonstrates how to set up a CI/CD pipeline for a simple Flask web 
 
 
 
-Build and run the Docker container:
+## Build and run the Docker container:
 
 docker build -t flask-app .
 docker run -p 5000:5000 flask-app
 
 
 
-CI/CD Pipeline
+##  CI/CD Pipeline
 
 The pipeline is triggered on every push to the main branch.
 Steps in the pipeline:
@@ -35,7 +35,8 @@ Test: (Placeholder for unit tests).
 Deploy: Uses Docker and Ansible to deploy the app.
 
 
-Files Overview
+## Files Overview
+
 app.py: Flask web application code.
 requirements.txt: Python dependencies.
 Dockerfile: Builds the Docker image.
@@ -43,6 +44,6 @@ ansible-playbook.yml: Configures and deploys the application using Ansible.
 .github/workflows/main.yml: GitHub Actions workflow for CI/CD.
 
 
-Challenges
+## Challenges
 Setting up Ansible modules for Docker requires installing the community.docker.
 Ensuring GitHub Actions runners had Docker installed.
